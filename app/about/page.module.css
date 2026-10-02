@@ -1,0 +1,270 @@
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  padding: calc(var(--header-height) + var(--space-4xl)) 0 var(--space-4xl);
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  color: var(--color-white);
+  font-size: var(--fs-4xl);
+  margin-bottom: var(--space-md);
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--fs-md);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* Story */
+.storySection {
+  background: var(--color-white);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.storyContent h2 {
+  margin-bottom: var(--space-xl);
+}
+
+.storyContent p {
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+}
+
+.storyImageWrapper {
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.storyImage {
+  width: 100%;
+  height: auto;
+}
+
+/* Values */
+.valuesSection {
+  background: var(--color-bg);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.valueCard {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.valueIcon {
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.valueCard h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.valueCard p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* Team */
+.teamSection {
+  background: var(--color-white);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.teamCard {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+}
+
+.teamCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.teamImageWrapper {
+  position: relative;
+  aspect-ratio: 5/6;
+  overflow: hidden;
+  background: var(--color-secondary);
+}
+
+.teamImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teamPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-dark));
+}
+
+.teamPlaceholder span {
+  font-family: var(--font-heading);
+  font-size: var(--fs-3xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  opacity: 0.5;
+}
+
+.teamInfo {
+  padding: var(--space-lg);
+}
+
+.teamInfo h3 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.teamRole {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.teamCredentials {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--color-text-lighter);
+  margin-bottom: var(--space-md);
+}
+
+.teamInfo p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  line-height: var(--lh-normal);
+  margin: 0;
+}
+
+/* Technology */
+.techSection {
+  background: var(--color-bg);
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-3xl);
+}
+
+.techCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+}
+
+.techCard:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.techIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.techCard h4 {
+  font-size: var(--fs-base);
+  margin-bottom: var(--space-xs);
+}
+
+.techCard p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+.tourCta {
+  text-align: center;
+}
+
+.tourCta p {
+  font-size: var(--fs-md);
+  color: var(--color-text-light);
+  margin-bottom: var(--space-md);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .valuesGrid,
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .valuesGrid,
+  .teamGrid,
+  .techGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: calc(var(--header-height) + var(--space-2xl)) 0 var(--space-2xl);
+  }
+}

@@ -1,0 +1,461 @@
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  padding: calc(var(--header-height) + var(--space-4xl)) 0 var(--space-4xl);
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  color: var(--color-white);
+  font-size: var(--fs-4xl);
+  margin-bottom: var(--space-md);
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--fs-md);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* Booking Section */
+.bookingSection {
+  background: var(--color-bg);
+}
+
+/* Progress Bar */
+.progressBar {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+  position: relative;
+}
+
+.progressBar::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: var(--color-border);
+}
+
+.progressStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  position: relative;
+  z-index: 1;
+}
+
+.progressCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  color: var(--color-text-lighter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  transition: all var(--transition-base);
+}
+
+.progressActive .progressCircle {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.progressDone .progressCircle {
+  border-color: var(--color-success);
+  background: var(--color-success);
+  color: var(--color-white);
+}
+
+.progressLabel {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-text-lighter);
+  transition: color var(--transition-fast);
+}
+
+.progressActive .progressLabel {
+  color: var(--color-primary);
+}
+
+.progressDone .progressLabel {
+  color: var(--color-success);
+}
+
+/* Form Container */
+.formContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--color-white);
+  padding: var(--space-3xl);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border-light);
+}
+
+.stepContent h2 {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-sm);
+}
+
+.stepContent > p {
+  color: var(--color-text-light);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-2xl);
+}
+
+/* Step 1: Service Selection */
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.serviceOption {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.serviceOption:hover {
+  border-color: var(--color-primary);
+  background: var(--color-secondary);
+}
+
+.serviceSelected {
+  border-color: var(--color-primary) !important;
+  background: var(--color-secondary) !important;
+}
+
+.serviceRadio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition-fast);
+}
+
+.serviceSelected .serviceRadio {
+  border-color: var(--color-primary);
+}
+
+.serviceRadioInner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  animation: scaleIn 0.2s ease;
+}
+
+/* Step 2: Date & Time */
+.dateTimeGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.fieldLabel {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  color: var(--color-text);
+}
+
+.dateGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--space-sm);
+}
+
+.dateOption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--space-sm) var(--space-xs);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.dateOption:hover {
+  border-color: var(--color-primary);
+}
+
+.dateSelected {
+  border-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+.dateDay {
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.dateNum {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+}
+
+.dateMonth {
+  font-size: var(--fs-xs);
+  opacity: 0.7;
+}
+
+.dateSelected .dateDay,
+.dateSelected .dateMonth {
+  opacity: 1;
+}
+
+.timeGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-sm);
+}
+
+.timeOption {
+  padding: var(--space-sm) var(--space-md);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.timeOption:hover {
+  border-color: var(--color-primary);
+}
+
+.timeSelected {
+  border-color: var(--color-primary) !important;
+  background: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+/* Step 3: Details */
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.patientTypeRow {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.patientTypeBtn {
+  flex: 1;
+  padding: var(--space-md);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.patientTypeBtn:hover {
+  border-color: var(--color-primary);
+}
+
+.patientTypeActive {
+  border-color: var(--color-primary) !important;
+  background: var(--color-secondary) !important;
+  color: var(--color-primary) !important;
+}
+
+.consentRow {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.consentRow input[type="checkbox"] {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.consentLabel {
+  font-size: var(--fs-xs);
+  color: var(--color-text-light);
+  line-height: var(--lh-normal);
+}
+
+.consentLabel a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Step 4: Confirmation */
+.confirmationStep {
+  text-align: center;
+}
+
+.confirmationIcon {
+  color: var(--color-success);
+  margin-bottom: var(--space-lg);
+  animation: scaleIn 0.5s ease;
+}
+
+.confirmationStep h2 {
+  color: var(--color-success);
+}
+
+.confirmationStep > p {
+  text-align: center;
+}
+
+.confirmationCard {
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  margin: var(--space-2xl) auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.confirmationRow {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.confirmationRow:last-child {
+  border-bottom: none;
+}
+
+.confirmationRow span {
+  font-size: var(--fs-sm);
+  color: var(--color-text-lighter);
+}
+
+.confirmationRow strong {
+  font-size: var(--fs-sm);
+  color: var(--color-text);
+}
+
+.confirmationNote {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  background: var(--color-secondary);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.confirmationNote svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.confirmationNote p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* Nav Buttons */
+.navButtons {
+  display: flex;
+  align-items: center;
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.navButtons button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: calc(var(--header-height) + var(--space-2xl)) 0 var(--space-2xl);
+  }
+
+  .formContainer {
+    padding: var(--space-xl);
+  }
+
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dateGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .timeGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .progressBar {
+    gap: var(--space-sm);
+  }
+
+  .progressLabel {
+    display: none;
+  }
+
+  .patientTypeRow {
+    flex-direction: column;
+  }
+}
